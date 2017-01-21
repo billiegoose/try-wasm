@@ -1,0 +1,14 @@
+{
+  "name": "try-wasm",
+  "version": "0.0.0",
+  "description": "Compile raw WebAssembly s-expressions in the browser!",
+  "main": "try-wasm.js",
+  "scripts": {
+    "docs": "projectz && mos"
+  },
+  "keywords": [],
+  "author": "William Hilton <wmhilton@gmail.com>",
+  "license": "Unlicense",
+  "maintainers": [],
+  "contributors": []
+}
