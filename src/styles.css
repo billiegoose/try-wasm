@@ -1,0 +1,109 @@
+html, body {
+    min-height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: absolute;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.box {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.header {
+    top: 0;
+    width: 100%;
+    height: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 5px;
+}
+.left {
+    left: 2em;
+    width: calc(50vw - 3em);
+}
+.right {
+    right: 2em;
+    width: calc(50vw - 3em);
+}
+.left > * {
+  position: absolute;
+}
+.right > * {
+  position: absolute;
+}
+.top {
+  top: 2em;
+  height: calc(50vh - 3em);
+}
+.bottom {
+  bottom: 2em;
+  height: calc(50vh - 3em);
+}
+#saveWAST {
+  left: auto;
+  right: 8em;
+  top: 2em;
+}
+#saveWASM {
+  left: auto;
+  right: 4em;
+  top: 2em;
+}
+#runJS {
+  left: auto;
+  right: 2em;
+  width: 5em;
+  top: 21vh;
+}
+
+#wast-textarea {
+  top: 4em;
+  bottom: 2em;
+  width: calc(100% - 8em);
+}
+#compile-wast {
+  left: auto;
+  right: 2em;
+  width: 5em;
+  top: 21vh;
+}
+
+#wasm-output {
+  position: absolute;
+  top: 4em;
+  bottom: 2em;
+  width: calc(100% - 4em);
+}
+
+#runModuleNative {
+  left: calc(50% - 2.5em);
+  right: auto;
+  width: 5em;
+  top: calc(100% - 1em);
+}
+
+#js-textarea {
+  position: absolute;
+  top: 4em;
+  bottom: 2em;
+  width: calc(100% - 8em);
+}
+
+textarea {
+  padding: 0.5em;
+}
+
+pre {
+  padding: 0.5em;
+  border-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-width: 1px;
+}

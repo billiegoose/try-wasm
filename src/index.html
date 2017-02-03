@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Try WebAssembly online</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="header box">
+            <p id="feature-detect-msg"></p>
+        </div>
+        
+        <div class="top left box">
+          <p>
+            Enter your WAST code here.
+          </p>
+          <button id="saveWAST" type="button" onclick="saveWAST()">Download source</button>
+          <textarea id="wast-textarea">
+(module
+  (export "add" $add)
+  (func $add (param $x f64) (param $y f64) (result f64)
+    (f64.add
+      (get_local $x)
+      (get_local $y)
+    )
+  )
+)
+          </textarea>
+          <button id="compile-wast" type="button" onclick="compileWAST()">Compile WAST</button>
+        </div>
+        
+        <div class="top right box">
+          <p>
+            Output:
+          </p>
+          <button id="saveWASM" type="button" onclick="saveWASM()">Download binary</button>
+          <button id="runModuleNative" type="button" onclick="runModuleNative()">Run</button>
+          <textarea readonly cols="80" id="wasm-output"></textarea>
+        </div>
+        
+        <div class="bottom left box">
+          <p>Test your module below using <a href="https://npmjs.com/package/tape"><tt>tape</tt></a>.
+            (The module is available as the <tt>m</tt>.)</p>
+          <button id="runJS" type="button" onclick="runJS()">Run JS tests</button>
+          <textarea id="js-textarea">
+test('add', (t) => {
+  t.equal(m.add(2,3), 5)
+})
+          </textarea>
+        </div>
+        
+        <div class="bottom right box">
+          <fieldset id="console-log-div"></fieldset>
+        </div>
+        
+        <script src="/src/static/wasm.js"></script>
+        <script src="/src/static/binaryen.js"></script>
+        <script src=/src/main.js></script>
+    </body>
+</html>
