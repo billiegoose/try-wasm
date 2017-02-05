@@ -12,7 +12,7 @@
   "license": "Unlicense",
   "maintainers": [],
   "contributors": [],
-  "dependencies": {
+  "devDependencies": {
     "browser-hex": "^1.0.1",
     "buffer": "^5.0.3",
     "console-log-div": "^0.6.3",
@@ -20,8 +20,5 @@
     "object-inspect": "^1.2.1",
     "save-as": "^0.1.8",
     "tape": "^4.6.3"
-  },
-  "devDependencies": {
-    "beefy": "^2.1.8"
   }
 }
