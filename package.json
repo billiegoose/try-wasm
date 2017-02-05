@@ -4,7 +4,7 @@
   "description": "Compile raw WebAssembly s-expressions in the browser!",
   "main": "try-wasm.js",
   "scripts": {
-    "start": "beefy src/main.js",
+    "start": "jus serve",
     "docs": "projectz && mos"
   },
   "keywords": [],
